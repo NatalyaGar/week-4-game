@@ -1,0 +1,100 @@
+body {
+ background-image: url(../images/geometry.png);
+}
+
+.headingName{
+    background-color: #c2afeb;
+    color: white;
+    padding: 20px 30px;
+    margin-left: 10px;
+    margin-right: 65%; 
+    font-size: 2em;
+    text-align: center;
+}
+
+#instruction  {
+    width: 400px;
+    height: 280px;
+    background-color: #e4e6f7;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding: 20px 20px;
+}
+
+.body-instruction{
+    color: #645a99;
+    align-content: center;
+}
+
+#random-number {
+    /* padding:35px 50px; */
+    background-color: #9999f0;
+    color: black;
+    width: 50px;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 0px;
+    /* margin-right: 20px; */
+    position: absolute;
+    padding: 10px 147px 60px 10px;
+    /* margin: 10px;  */
+}
+
+.counterWinsLoss {
+    padding:10px 30px 10px 5px;
+    width: 70px;
+    background-color: #cc94f1;
+    position: relative;
+   
+    margin-left:240px;
+    /* display: inline-block; */
+    margin-top: 20px;
+    /* float: left; */
+    
+
+    /* margin-bottom: 600px; */
+    
+}
+
+
+.imgOne,
+.imgTwo,
+.imgThree,
+.imgFour{
+    width: 65px;
+    height: 65px;
+ 
+   
+}
+
+.imgOne {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.imgTwo,
+.imgThree,
+.imgFour {
+   margin-left: 10px;
+   margin-top: 10px;
+}
+
+.totalScore {
+    padding: 10px 70px 10px 10px;
+    margin-right: 83.5%;
+    margin-left: 10px;
+    
+    margin-top: 10px;
+    background-color: #a68fd6;
+}
+
+.scoreNumber {
+    background-color: #a68fd6;
+    position: absolute;
+    margin-bottom: 30px;
+    padding: 10px 176px 40px 10px;
+    margin: 10px 0px 20px 10px; 
+    font-size: 30px;
+    
+
+}
