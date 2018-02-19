@@ -16,10 +16,10 @@ $(document).ready(function() {
 
  //Send random number to html
  $ ("#random-number").text(randomNumber);
- console.log(randomNumber);
+ console.log("Random number is " + randomNumber);
 
  //Create for each crystal  random hidden value between 1-12
-   var  one  = Math.floor(Math.random()* 10 +2 )
+   var one  = Math.floor(Math.random()* 10 +2 )
    var two = Math.floor(Math.random()* 10 + 2 )
    var three = Math.floor(Math.random()*10 +2 )
    var four =Math.floor(Math.random()* 10 +2 )
@@ -33,29 +33,107 @@ $(document).ready(function() {
    $('#losses-counter').text(losses);
    $('#scoreNumber').text(totalScoreNumber);
 
+   function reset() {
+       randomNumber = Math.floor(Math.random()* 101 + 19);
+       console.log("Reset Random number is " + randomNumber);
+       $("#random-number").text(randomNumber);
+       one  = Math.floor(Math.random()* 10 +2 );
+       two = Math.floor(Math.random()* 10 + 2 );
+       three = Math.floor(Math.random()*10 +2 );
+       four =Math.floor(Math.random()* 10 +2 );
+       totalScoreNumber = 0;
+       $("scoreNumber").text(totalScoreNumber);
+       console.log("Reset scoreNumber " + totalScoreNumber);
+
+
+   }
+
+            // add wins to win-counter
+        
+        function win(){
+           
+            wins++;
+            $("#win-counter").text(wins);
+            $("#alert").text("You won!");
+            alert("You won!");
+            totalScoreNumber = 0;
+            reset();
+
+        }
+
+        // add losses to losses-counter
+
+        function lose(){
+           
+            losses++;
+            $("#losses-counter").text(losses);
+            $("#alert").text("You lose.");
+            alert("You lose");
+            totalScoreNumber = 0;
+            reset();
+        }
+
+  
+
   //Clicks for cristals
   $("#one1").on ('click',function(){
-    totalScoreNumber  = totalScoreNumber  + one;
-    console.log("User total Score= " + totalScoreNumber ); 
-    $('#scoreNumber').text(totalScoreNumber);
-     //set win and lose conditions
-    console.log("User total Score= " + totalScoreNumber ); 
-     if (totalScoreNumber  == randomNumber){
-        win ();
-     }
-     else if (totalScoreNumber > randomNumber){
-         lose();
-     }
+        totalScoreNumber  = totalScoreNumber  + one;
+        console.log("User total Score= " + totalScoreNumber ); 
+        $('#scoreNumber').text(totalScoreNumber);
+        //set win and lose conditions
+        console.log("User total Score= " + totalScoreNumber ); 
+        if (totalScoreNumber  == randomNumber){ 
+            win ();
+        }
+        else if (totalScoreNumber > randomNumber){
+            lose();
+        }
   })
+
+  $("#two2").on ('click',function(){
+        totalScoreNumber  = totalScoreNumber  + two;
+        console.log("User total Score= " + totalScoreNumber ); 
+        $('#scoreNumber').text(totalScoreNumber);
+        //set win and lose conditions
+        console.log("User total Score= " + totalScoreNumber ); 
+        if (totalScoreNumber  == randomNumber){
+            win ();
+        }
+        else if (totalScoreNumber > randomNumber){
+            lose();
+        }
+    })
+
+     $("#three3").on ('click',function(){
+        totalScoreNumber  = totalScoreNumber  + three;
+        console.log("User total Score= " + totalScoreNumber ); 
+        $('#scoreNumber').text(totalScoreNumber);
+         //set win and lose conditions
+        console.log("User total Score= " + totalScoreNumber ); 
+         if (totalScoreNumber  == randomNumber){
+            win ();
+         }
+         else if (totalScoreNumber > randomNumber){
+             lose();
+         }
+
+    })
+
+    $("#four4").on ('click',function(){
+        totalScoreNumber  = totalScoreNumber  + four;
+        console.log("User total Score= " + totalScoreNumber ); 
+        $('#scoreNumber').text(totalScoreNumber);
+         //set win and lose conditions
+        console.log("User total Score= " + totalScoreNumber ); 
+         if (totalScoreNumber  == randomNumber){
+            win ();
+         }
+         else if (totalScoreNumber > randomNumber){
+             lose();
+         }
+
+    })
  
-  //add wins to the Tolas Score
-  function win(){
-      alert("You won!");
-      wins++;
-      $("win-counter").text(wins);
-      reset();
-
-  }
-
+ 
 
 });
