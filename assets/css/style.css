@@ -41,7 +41,7 @@ body {
 }
 
 .counterWinsLoss {
-    padding:10px 30px 10px 5px;
+    padding:20px 30px 18px 5px;
     width: 70px;
     background-color: #cc94f1;
     position: relative;
@@ -88,7 +88,7 @@ body {
     background-color: #a68fd6;
 }
 
-.scoreNumber {
+#scoreNumber {
     background-color: #a68fd6;
     position: absolute;
     margin-bottom: 30px;
