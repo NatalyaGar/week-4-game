@@ -34,16 +34,27 @@ $(document).ready(function() {
    $('#scoreNumber').text(totalScoreNumber);
 
    function reset() {
+       //Reset Total Score Number to 0
+       $("#scoreNumber").text(totalScoreNumber= 0);
+       console.log("Reset scoreNumber " + totalScoreNumber);
+
+       //Creates random number
        randomNumber = Math.floor(Math.random()* 101 + 19);
        console.log("Reset Random number is " + randomNumber);
+
+       // Display random number on the html
        $("#random-number").text(randomNumber);
+
+       //Create new random number for crystals
        one  = Math.floor(Math.random()* 10 +2 );
        two = Math.floor(Math.random()* 10 + 2 );
        three = Math.floor(Math.random()*10 +2 );
        four =Math.floor(Math.random()* 10 +2 );
-       totalScoreNumber = 0;
-       $("scoreNumber").text(totalScoreNumber);
-       console.log("Reset scoreNumber " + totalScoreNumber);
+
+       
+
+    
+       
 
 
    }
@@ -55,8 +66,9 @@ $(document).ready(function() {
             wins++;
             $("#win-counter").text(wins);
             $("#alert").text("You won!");
-            alert("You won!");
             totalScoreNumber = 0;
+            alert("You won!");
+            
             reset();
 
         }
@@ -68,8 +80,9 @@ $(document).ready(function() {
             losses++;
             $("#losses-counter").text(losses);
             $("#alert").text("You lose.");
-            alert("You lose");
             totalScoreNumber = 0;
+            alert("You lose");
+            
             reset();
         }
 
@@ -84,9 +97,11 @@ $(document).ready(function() {
         console.log("User total Score= " + totalScoreNumber ); 
         if (totalScoreNumber  == randomNumber){ 
             win ();
+           
         }
         else if (totalScoreNumber > randomNumber){
             lose();
+           
         }
   })
 
