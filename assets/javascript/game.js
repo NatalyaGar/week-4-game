@@ -28,7 +28,8 @@ $(document).ready(function() {
    var wins = 0;
    var losses = 0;
    var totalScoreNumber = 0;
-
+ 
+   //Send values at the begining of the game to html  
    $ ('#win-counter').text(wins);
    $('#losses-counter').text(losses);
    $('#scoreNumber').text(totalScoreNumber);
@@ -36,11 +37,11 @@ $(document).ready(function() {
    function reset() {
        //Reset Total Score Number to 0
        $("#scoreNumber").text(totalScoreNumber= 0);
-       console.log("Reset scoreNumber " + totalScoreNumber);
+       console.log("Reset totalScoreNumber " + totalScoreNumber);
 
-       //Creates random number
+       //Creates random number at  class="All"
        randomNumber = Math.floor(Math.random()* 101 + 19);
-       console.log("Reset Random number is " + randomNumber);
+       console.log("Reset Random number for 'All' is " + randomNumber);
 
        // Display random number on the html
        $("#random-number").text(randomNumber);
@@ -49,12 +50,7 @@ $(document).ready(function() {
        one  = Math.floor(Math.random()* 10 +2 );
        two = Math.floor(Math.random()* 10 + 2 );
        three = Math.floor(Math.random()*10 +2 );
-       four =Math.floor(Math.random()* 10 +2 );
-
-       
-
-    
-       
+       four =Math.floor(Math.random()* 10 +2 );      
 
 
    }
@@ -90,16 +86,18 @@ $(document).ready(function() {
 
   //Clicks for cristals
   $("#one1").on ('click',function(){
+       //Adds random number for this cristal to totalScoreNumber
         totalScoreNumber  = totalScoreNumber  + one;
-        console.log("User total Score= " + totalScoreNumber ); 
+        console.log("Random number of cristal1 = " + one); 
+        //Send totalScoreNumber to html
         $('#scoreNumber').text(totalScoreNumber);
+        console.log("User totalScoreNumber1 html = " + totalScoreNumber ); 
         //set win and lose conditions
-        console.log("User total Score= " + totalScoreNumber ); 
         if (totalScoreNumber  == randomNumber){ 
             win ();
            
         }
-        else if (totalScoreNumber > randomNumber){
+        else if (totalScoreNumber > randomNumber){ 
             lose();
            
         }
@@ -107,10 +105,10 @@ $(document).ready(function() {
 
   $("#two2").on ('click',function(){
         totalScoreNumber  = totalScoreNumber  + two;
-        console.log("User total Score= " + totalScoreNumber ); 
+        console.log("Random number of cristal2 = " + two ); 
         $('#scoreNumber').text(totalScoreNumber);
+        console.log("User totalScoreNumber2 html= " + totalScoreNumber ); 
         //set win and lose conditions
-        console.log("User total Score= " + totalScoreNumber ); 
         if (totalScoreNumber  == randomNumber){
             win ();
         }
@@ -121,10 +119,10 @@ $(document).ready(function() {
 
      $("#three3").on ('click',function(){
         totalScoreNumber  = totalScoreNumber  + three;
-        console.log("User total Score= " + totalScoreNumber ); 
+        console.log( "Random number of cristal3 = " + three);  
         $('#scoreNumber').text(totalScoreNumber);
+        console.log("User totalScoreNumber3 html= " + totalScoreNumber ); 
          //set win and lose conditions
-        console.log("User total Score= " + totalScoreNumber ); 
          if (totalScoreNumber  == randomNumber){
             win ();
          }
@@ -136,10 +134,10 @@ $(document).ready(function() {
 
     $("#four4").on ('click',function(){
         totalScoreNumber  = totalScoreNumber  + four;
-        console.log("User total Score= " + totalScoreNumber ); 
+        console.log("Random number of cristal4 = " + four); 
         $('#scoreNumber').text(totalScoreNumber);
-         //set win and lose conditions
-        console.log("User total Score= " + totalScoreNumber ); 
+        console.log("User totalScoreNumber4= " + totalScoreNumber ); 
+        //set win and lose conditions
          if (totalScoreNumber  == randomNumber){
             win ();
          }
